@@ -9,7 +9,7 @@
     padding: 8px;
     line-height: 18px;
     vertical-align: top;
-    border-top: 1px solid $color1;
+    border-top: 1px solid darken($color000, 10%);
     text-align: left;
   }
 
@@ -25,7 +25,7 @@
   }
 
   & > tbody > tr:nth-child(odd) > td, & > tbody > tr:nth-child(odd) > th {
-    background: $color1;
+    background: lighten($color000, 20%);
   }
 
   a {

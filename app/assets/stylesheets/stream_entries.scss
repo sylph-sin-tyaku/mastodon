@@ -1,9 +1,9 @@
 .activity-stream {
   clear: both;
-  box-shadow: 0 0 15px rgba($color8, 0.2);
+  box-shadow: 0 0 15px rgba($color8, 0.5);
 
   .entry {
-    background: $color5;
+    background: lighten($color000, 20%);
 
     .detailed-status.light, .status.light {
       border-bottom: 1px solid $color2;
@@ -87,7 +87,7 @@
 
       span {
         font-size: 14px;
-        color: $color3;
+        color: $color4;
       }
     }
 
@@ -124,7 +124,7 @@
 
   .detailed-status.light {
     padding: 14px;
-    background: $color5;
+    background: lighten($color000, 20%);
     cursor: default;
 
     .detailed-status__display-name {

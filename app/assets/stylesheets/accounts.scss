@@ -14,7 +14,7 @@
   }
 
   &:after {
-    background: linear-gradient(rgba($color8, 0.5), rgba($color8, 0.8));
+    background: linear-gradient(rgba($color000, 0.2), rgba($color000, 0.8));
     display: block;
     content: "";
     position: absolute;
@@ -34,7 +34,7 @@
     text-align: center;
     position: relative;
     z-index: 2;
-    text-shadow: 0 0 2px $color8;
+    text-shadow: 0 0 5px rgba($color5, 0.3);
 
     small {
       display: block;
@@ -82,10 +82,10 @@
 
   .counter {
     width: 80px;
-    color: $color3;
+    color: $color4;
     padding: 5px 10px 0px;
     margin-bottom: 10px;
-    border-right: 1px solid $color3;
+    border-right: 1px solid $color000;
     cursor: default;
     position: relative;
 
@@ -100,7 +100,7 @@
       bottom: -10px;
       left: 0;
       width: 100%;
-      border-bottom: 4px solid $color3;
+      border-bottom: 4px solid $color000;
       opacity: 0.5;
       transition: all 0.8s ease;
     }
@@ -129,7 +129,7 @@
       text-transform: uppercase;
       display: block;
       margin-bottom: 5px;
-      text-shadow: 0 0 2px $color8;
+      text-shadow: 0 0 2px rgba($color8,0.3);
     }
 
     .counter-number {
@@ -239,7 +239,7 @@
 
 .accounts-grid {
   box-shadow: 0 0 15px rgba($color8, 0.2);
-  background: $color5;
+  background: lighten($color000, 20%);
   border-radius: 0 0 4px 4px;
   padding: 20px 10px;
   padding-bottom: 10px;
@@ -312,7 +312,7 @@
     .note {
       padding: 10px;
       padding-top: 15px;
-      color: $color3;
+      color: $color5;
       word-wrap: break-word;
     }
   }
@@ -371,7 +371,7 @@
 
       span {
         font-size: 14px;
-        color: $color3;
+        color: $color4;
       }
     }
 
