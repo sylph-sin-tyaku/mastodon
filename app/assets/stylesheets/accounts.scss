@@ -183,7 +183,7 @@
   }
 
   .current {
-    background: $color5;
+    background: $color000;
     border-radius: 100px;
     color: $color1;
     cursor: default;
@@ -196,7 +196,7 @@
 
   .prev, .next {
     text-transform: uppercase;
-    color: $color2;
+    color: $color5;
   }
 
   .prev {
