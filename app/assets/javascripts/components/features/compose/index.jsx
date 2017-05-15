@@ -1,6 +1,7 @@
 import ComposeFormContainer from './containers/compose_form_container';
 import UploadFormContainer from './containers/upload_form_container';
 import NavigationContainer from './containers/navigation_container';
+import AnnouncementsContainer from './containers/announcements_container';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { mountCompose, unmountCompose } from '../../actions/compose';
@@ -19,7 +20,8 @@ const messages = defineMessages({
 });
 
 const mapStateToProps = state => ({
-  showSearch: state.getIn(['search', 'submitted']) && !state.getIn(['search', 'hidden'])
+  showSearch: state.getIn(['search', 'submitted']) && !state.getIn(['search', 'hidden']),
+  submitting: state.getIn(['compose', 'is_submitting'])
 });
 
 class Compose extends React.PureComponent {
@@ -28,11 +30,30 @@ class Compose extends React.PureComponent {
     this.props.dispatch(mountCompose());
   }
 
+  componentDidUpdate (prevProps) {
+    if (this.props.intent && prevProps.submitting && !this.props.submitting) {
+      window.close();
+      // Cannot close window unless it opened by JavaScript.
+      setTimeout(() => (location.href = '/'), 240);
+    }
+  }
+
   componentWillUnmount () {
     this.props.dispatch(unmountCompose());
   }
 
   render () {
+    if (this.props.intent) {
+      return (
+        <div className='compose-form__intent'>
+          <div style={{ maxWidth: 400, width: '100%' }}>
+            <NavigationContainer />
+            <ComposeFormContainer />
+          </div>
+        </div>
+      );
+    }
+
     const { withHeader, showSearch, intl } = this.props;
 
     let header = '';
@@ -59,6 +80,7 @@ class Compose extends React.PureComponent {
           <div className='drawer__inner'>
             <NavigationContainer />
             <ComposeFormContainer />
+            <AnnouncementsContainer />
           </div>
 
           <Motion defaultStyle={{ x: -100 }} style={{ x: spring(showSearch ? 0 : -100, { stiffness: 210, damping: 20 }) }}>
@@ -78,7 +100,9 @@ class Compose extends React.PureComponent {
 Compose.propTypes = {
   dispatch: PropTypes.func.isRequired,
   withHeader: PropTypes.bool,
+  intent: PropTypes.bool,
   showSearch: PropTypes.bool,
+  submitting: PropTypes.bool,
   intl: PropTypes.object.isRequired
 };
 
