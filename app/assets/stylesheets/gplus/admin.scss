@@ -6,7 +6,7 @@
   .sidebar-wrapper {
     flex: 1;
     height: 100%;
-    background: $color1;
+    background: $color000;
     display: flex;
     justify-content: flex-end;
   }
@@ -29,6 +29,7 @@
       border-radius: 4px 0 0 4px;
       overflow: hidden;
       margin-bottom: 20px;
+      background-color: $color000;
 
       a {
         display: block;
@@ -44,18 +45,18 @@
 
         &:hover {
           color: $color5;
-          background-color: darken($color1, 5%);
+          background-color: lighten($color000, 5%);
           transition: all 100ms linear;
         }
 
         &.selected {
-          background: darken($color1, 2%);
+          background: lighten($color000, 20%);
           border-radius: 4px 0 0 0;
         }
       }
 
       ul {
-        background: darken($color1, 4%);
+        background: $color000;
         border-radius: 0 0 0 4px;
         margin: 0;
 
@@ -89,7 +90,7 @@
     padding-left: 25px;
 
     h2 {
-      color: $color2;
+      color: $color5;
       font-size: 24px;
       line-height: 28px;
       font-weight: 400;
@@ -99,7 +100,7 @@
     & > p {
       font-size: 14px;
       line-height: 18px;
-      color: $color2;
+      color: $color5;
       margin-bottom: 20px;
 
       strong {
@@ -118,6 +119,7 @@
 
   .simple_form {
     max-width: 400px;
+    color: $color5;
     .label_input {
       label.select {
         width: 50%;
