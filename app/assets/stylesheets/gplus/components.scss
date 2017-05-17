@@ -684,7 +684,7 @@ a.status__content__spoiler-link {
   position: relative;
 
   & > div {
-    background: rgba(lighten($color000, 4%), 0.9);
+    background: rgba($color003, 0.7);
   }
 
   .account__header__content {
