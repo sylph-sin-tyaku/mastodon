@@ -43,3 +43,11 @@ redis
 # Ignore vim files
 *~
 *.swp
+/public/favicon.ico
+/public/oops.png
+/app/assets/images/mastodon.jpg
+/app/assets/images/mastodon_small.jpg
+/app/assets/images/mastodon-getting-started.png
+/app/assets/images/background-photo.jpg
+/app/assets/images/fluffy-elephant-friend.png
+/app/assets/images/logo.png
