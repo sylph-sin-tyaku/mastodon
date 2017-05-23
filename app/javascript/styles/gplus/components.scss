@@ -74,18 +74,21 @@
   }
 
   .column-collapsable__button {
-    color: $primary-text-color;
+    color: darken($color_background, 50%);
     background: $color_background;
 
     &:hover {
-      color: lighten($primary-text-color, 8%);
-      background: lighten($color_background, 8%);
+      color: lighten($ui-primary-color, 7%);
     }
   }
 
   &.collapsed .column-collapsable__button {
-    color: $ui-primary-color;
-    background: lighten($color_background, 4%);
+    color: darken($color_background, 50%);
+    background: $color_background;
+
+    &:hover {
+      color: lighten($ui-primary-color, 7%);
+    }
   }
 }
 
@@ -673,7 +676,6 @@
 
 .status__action-bar-dropdown {
   float: left;
-  height: 18px;
   width: 18px;
 }
 
@@ -1047,6 +1049,7 @@
 
   .status__display-name strong {
     color: lighten($ui-base-color, 26%);
+    font-size: 1.1em;
   }
 
   .status__avatar {
@@ -1234,7 +1237,6 @@
 }
 
 .dropdown__icon {
-  vertical-align: middle;
 }
 
 .static-content {
@@ -1400,7 +1402,7 @@
   height: 100%;
 
   &.darker {
-    background: $ui-base-color;
+    background: $color_panel;
   }
 }
 
@@ -2705,6 +2707,10 @@ button.icon-button.active i.fa-retweet {
   font-size: 14px;
   margin: 0;
 
+  &::-webkit-input-placeholder {
+    color: $color_white;
+  }
+
   &::-moz-focus-inner {
     border: 0;
   }
@@ -2765,15 +2771,14 @@ button.icon-button.active i.fa-retweet {
     }
 
     &:hover {
-      color: $color_text;
+      color: $color_link;
     }
   }
 }
 
 .search-results__header {
-  color: lighten($ui-base-color, 26%);
-  background: lighten($ui-base-color, 2%);
-  border-bottom: 1px solid darken($ui-base-color, 4%);
+  color: $color_text;
+  background: $color_background;
   padding: 15px 10px;
   font-size: 14px;
   font-weight: 500;
@@ -2781,14 +2786,14 @@ button.icon-button.active i.fa-retweet {
 
 .search-results__hashtag {
   display: block;
-  padding: 10px;
-  color: $ui-secondary-color;
+  padding: 1em;
+  color: $color_link;
   text-decoration: none;
 
   &:hover,
   &:active,
   &:focus {
-    color: lighten($ui-secondary-color, 4%);
+    color: lighten($color_link, 4%);
     text-decoration: underline;
   }
 }
