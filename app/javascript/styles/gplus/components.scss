@@ -1855,13 +1855,18 @@ button.icon-button.active i.fa-retweet {
   font-size: 14px;
   border: 1px solid lighten($ui-base-color, 8%);
   border-radius: 4px;
-  color: lighten($ui-base-color, 26%);
+  color: $color_link;
   margin-top: 14px;
   text-decoration: none;
   overflow: hidden;
+  background: $color_background;
+  transition: all 100ms ease-in;
 
+  &:active,
+  &:focus,
   &:hover {
-    background: lighten($ui-base-color, 8%);
+    background: darken($color_background, 8%);
+    transition: all 200ms ease-out;
   }
 }
 
@@ -1937,7 +1942,7 @@ button.icon-button.active i.fa-retweet {
 
 .status-card__image {
   flex: 0 0 100px;
-  background: lighten($ui-base-color, 8%);
+  background: $color_background;
 }
 
 .status-card__image-image {

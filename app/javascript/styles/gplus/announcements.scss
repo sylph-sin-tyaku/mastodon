@@ -49,6 +49,15 @@
   border-radius: 4px;
   margin-top: 5px;
   margin-right: 3px;
+  transition: all 100ms ease-in;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: lighten($color_link, 7%);
+    transition: all 200ms ease-out;
+  }
+
 }
 
 .announcements__body__dismiss {
