@@ -62,3 +62,4 @@ docker-compose.override.yml
 /app/javascript/images/background-photo.jpg
 /public/oops.png
 /public/favicon.ico
+/app/javascript/images/logo.png
