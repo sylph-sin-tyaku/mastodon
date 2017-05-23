@@ -63,3 +63,4 @@ docker-compose.override.yml
 /public/oops.png
 /public/favicon.ico
 /app/javascript/images/logo.png
+/public/robots.txt
