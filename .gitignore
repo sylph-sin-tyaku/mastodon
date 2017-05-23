@@ -60,7 +60,7 @@ docker-compose.override.yml
 /app/javascript/images/mastodon_small.jpg
 /app/javascript/images/mastodon-getting-started.png
 /app/javascript/images/background-photo.jpg
+/app/javascript/images/logo.png
 /public/oops.png
 /public/favicon.ico
-/app/javascript/images/logo.png
 /public/robots.txt
