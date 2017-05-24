@@ -259,8 +259,8 @@ ja:
       following: フォロー中のアカウントリスト
       muting: ミュートしたアカウントリスト
     upload: アップロード
-  landing_strip_html: <strong>%{name}</strong> さんはインスタンス %{link_to_root_path} のユーザーです。<br />マストドンアカウントさえ持っていればフォローしたり会話したりできます。
-  landing_strip_signup_html: もしお持ちでないなら <a href="http://portaldon.info/">こちら</a> 等で、お好きなインスタンスを探して登録してみてください。
+  landing_strip_html: <strong>%{name}</strong> さんはインスタンス %{link_to_root_path} のユーザーです。<br />マストドンアカウントさえ持っていれば、フォローしたり会話したりできます。<br />もしお持ちでないなら <a href="http://portaldon.info/">こちら</a> 等で、お好きなインスタンスを探して登録してみてください。
+  landing_strip_signup_html: 当インスタンスには <a href="%{sign_up_path}">こちら</a> から入居できます。
   media_attachments:
     validations:
       images_and_video: 既に画像が追加されているため、動画を追加することはできません。
