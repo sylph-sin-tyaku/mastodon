@@ -134,7 +134,7 @@
   background: $color_background;
   cursor: pointer;
   transition: color 100ms ease-in;
-  box-shadow: 0px 0px 1em rgba($color_black, 0.2);
+  box-shadow: 0px 0px 0.5em rgba($color_black, 0.2);
   border-radius: 50%;
 
   &:hover,
