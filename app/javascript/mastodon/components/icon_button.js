@@ -18,6 +18,7 @@ class IconButton extends React.PureComponent {
     inverted: PropTypes.bool,
     animate: PropTypes.bool,
     overlay: PropTypes.bool,
+    text: PropTypes.string,
   };
 
   static defaultProps = {
@@ -77,7 +78,7 @@ class IconButton extends React.PureComponent {
             className={classes.join(' ')}
             onClick={this.handleClick}
             style={style}>
-            <i style={{ transform: `rotate(${rotate}deg)` }} className={`fa fa-fw fa-${this.props.icon}`} aria-hidden='true' />
+            <i style={{ transform: `rotate(${rotate}deg)` }} className={`fa fa-fw fa-${this.props.icon}`} aria-hidden='true'>{this.props.text}</i>
           </button>
         }
       </Motion>
