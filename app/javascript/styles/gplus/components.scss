@@ -571,7 +571,7 @@
   animation: fade 150ms linear;
 
   &.status-direct {
-    background: lighten($ui-base-color, 8%);
+    background: lighten($color_theme, 40%);
 
     .icon-button.disabled {
       color: lighten($ui-base-color, 16%);
