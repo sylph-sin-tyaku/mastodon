@@ -137,7 +137,7 @@ class StatusActionBar extends ImmutablePureComponent {
 
     return (
       <div className='status__action-bar'>
-        <IconButton className='status__action-bar-button'  title={replyTitle} icon={replyIcon} onClick={this.handleReplyClick} />
+        <IconButton className='status__action-bar-button' title={replyTitle} icon={replyIcon} onClick={this.handleReplyClick} />
         <IconButton className='status__action-bar-button' disabled={reblogDisabled} active={status.get('reblogged')} title={reblogDisabled ? intl.formatMessage(messages.cannot_reblog) : intl.formatMessage(messages.reblog)} icon={reblogIcon} onClick={this.handleReblogClick} />
         <IconButton className='status__action-bar-button star-icon' animate={true} active={status.get('favourited')} title={intl.formatMessage(messages.favourite)} icon='' text='+1' onClick={this.handleFavouriteClick} activeStyle={{ color: '#DB4437' }} />
 
