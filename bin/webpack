@@ -28,6 +28,6 @@ WEBPACK_BIN    = "#{NODE_MODULES_PATH}/.bin/webpack"
 WEBPACK_CONFIG = "#{WEBPACK_CONFIG_PATH}/#{NODE_ENV}.js"
 
 Dir.chdir(APP_PATH) do
-  exec "NODE_PATH=#{NODE_MODULES_PATH} #{WEBPACK_BIN} --watch --config #{WEBPACK_CONFIG}" \
+  exec "NODE_PATH=#{NODE_MODULES_PATH} #{WEBPACK_BIN} --progress --config #{WEBPACK_CONFIG}" \
     " #{ARGV.join(" ")}"
 end
