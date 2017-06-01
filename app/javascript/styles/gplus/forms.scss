@@ -174,8 +174,8 @@ code {
     width: 100%;
     border: 0;
     border-radius: 4px;
-    background: $color_link;
-    color: $color_text;
+    background: $color_theme;
+    color: $color_white;
     font-size: 18px;
     line-height: inherit;
     height: auto;
@@ -189,13 +189,15 @@ code {
     outline: 0;
     margin-bottom: 10px;
     margin-right: 10px;
+    transition: all 100ms ease-in;
 
     &:last-child {
       margin-right: 0;
     }
 
     &:hover {
-      background-color: lighten($color_link, 5%);
+      background-color: $color_link;
+      transition: all 200ms ease-out;
     }
 
     &:active,
