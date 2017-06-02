@@ -61,6 +61,7 @@
 .column-collapsable {
   position: relative;
   flex: 0 0 auto;
+  top: -8px;
 
   .column-collapsable__content {
     overflow: auto;
@@ -75,8 +76,8 @@
   }
 
   .column-collapsable__button {
-    color: darken($color_background, 50%);
-    background: $color_background;
+    color: $color_glay;
+    background: $color_panel;
 
     &:hover {
       color: lighten($ui-primary-color, 7%);
@@ -84,8 +85,8 @@
   }
 
   &.collapsed .column-collapsable__button {
-    color: darken($color_background, 50%);
-    background: $color_background;
+    color: $color_glay;
+    background: $color_panel;
 
     &:hover {
       color: lighten($ui-primary-color, 7%);
@@ -94,8 +95,8 @@
 }
 
 .column-icon {
-  background: $color_background;
-  color: darken($color_background, 50%);
+  background: $color_panel;
+  color: $color_glay;
   cursor: pointer;
   font-size: 16px;
   padding: 15px;
@@ -1087,7 +1088,7 @@
   padding: 8px 0;
   padding-bottom: 0;
   cursor: default;
-  color: darken($color_background, 50%);
+  color: $color_glay;
   font-size: 15px;
   position: relative;
 
@@ -1518,8 +1519,7 @@
 }
 
 .column-back-button {
-  background: $color_background;
-  color: darken($color_background, 50%);
+  color: $color_glay;
   cursor: pointer;
   flex: 0 0 auto;
   font-size: 16px;
@@ -1538,6 +1538,7 @@
 
 .column-back-button--slim {
   position: relative;
+  top: -8px;
 }
 
 .column-back-button--slim-button {
@@ -2012,13 +2013,14 @@ button.icon-button.active i.fa-retweet {
 .column-header {
   padding: 15px;
   font-size: 16px;
-  background: $color_background;
-  color: darken($color_background, 50%);
+  background: $color_panel;
+  color: $color_glay;
   flex: 0 0 auto;
   cursor: pointer;
   position: relative;
   z-index: 2;
   outline: 0;
+  margin-bottom: 8px;
 
   &.active {
     color: darken($color_link, 50%);
@@ -2058,7 +2060,7 @@ button.icon-button.active i.fa-retweet {
 .video-error-cover {
   align-items: center;
   background: $color_background;
-  color: darken($color_background, 50%);
+  color: $color_glay;
   cursor: pointer;
   display: flex;
   flex-direction: column;
