@@ -1459,7 +1459,7 @@
   display: block;
   flex: 1 1 auto;
   padding: 15px 10px;
-  color: darken($color_background, 10%);
+  color: lighten($color_glay, 3%);
   text-decoration: none;
   text-align: center;
   font-size: 14px;
