@@ -1145,13 +1145,13 @@
   }
 }
 
-.transparent-background,
-.imageloader {
-  background: url('../images/void.png');
+.image-loader__img {
+  transition: opacity 0.3s linear;
+  opacity: 1;
 }
 
-.imageloader {
-  display: block;
+.image-loader__img-loading {
+  opacity: 0.7;
 }
 
 .navigation-bar {
@@ -1531,6 +1531,22 @@
   }
 }
 
+.column-header__back-button {
+  background: $color_theme;
+  border: 0;
+  font-family: inherit;
+  color: $color_link;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-size: 16px;
+  padding: 0 15px;
+  z-index: 3;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .column-back-button__icon {
   display: inline-block;
   margin-right: 5px;
@@ -1585,7 +1601,7 @@
   height: 24px;
   padding: 0;
   border-radius: 30px;
-  background-color: $ui-base-color;
+  background-color: darken($color_link, 10%);
   transition: all 0.2s ease;
 }
 
@@ -1645,9 +1661,9 @@
   left: 1px;
   width: 22px;
   height: 22px;
-  border: 1px solid $ui-base-color;
+  border: 1px solid $color_theme;
   border-radius: 50%;
-  background-color: darken($color_text, 2%);
+  background-color: $color_theme;
   box-sizing: border-box;
   transition: all 0.25s ease;
 }
@@ -2027,7 +2043,7 @@ button.icon-button.active i.fa-retweet {
     box-shadow: 0 4px 5px rgba($color_text, 0.5);
   }
 
-  &.active .fa {
+  &.active .column-header__icon {
     color: darken($color_link, 50%);
     text-shadow: 0 0 5px rgba($color_text, 0.5);
   }
@@ -2042,6 +2058,89 @@ button.icon-button.active i.fa-retweet {
   &:active {
     outline: 0;
   }
+}
+
+.column-header__buttons {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+}
+
+.column-header__button {
+  background: $color_theme;
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 15px;
+
+  &:hover {
+    color: darken($color_theme, 3%);
+  }
+
+  &.active {
+    color: $primary-text-color;
+    background: darken($color_theme, 3%);
+
+    &:hover {
+      color: $primary-text-color;
+      background: $color_theme;
+    }
+  }
+}
+
+.column-header__collapsible {
+  max-height: 70vh;
+  overflow: hidden;
+  overflow-y: auto;
+  color: $ui-primary-color;
+  transition: max-height 150ms ease-in-out, opacity 300ms linear;
+  opacity: 1;
+
+  & > div {
+    background: $color_background;
+    padding: 15px;
+  }
+
+  &.collapsed {
+    max-height: 0;
+    opacity: 0.5;
+  }
+
+  &.animating {
+    overflow-y: hidden;
+  }
+}
+
+.column-header__setting-btn {
+  &:hover {
+    color: lighten($ui-primary-color, 4%);
+    text-decoration: underline;
+  }
+}
+
+.column-header__setting-arrows {
+  float: right;
+
+  .column-header__setting-btn {
+    padding: 0 10px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.text-btn {
+  display: inline-block;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: $color_link;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
 }
 
 .column-header__icon {
@@ -2187,13 +2286,12 @@ button.icon-button.active i.fa-retweet {
   left: 20px;
 }
 
-.setting-toggle__label {
+.setting-toggle {
   display: block;
   line-height: 24px;
-  vertical-align: middle;
 }
 
-.setting-toggle {
+.setting-toggle__label {
   color: $color_text;
   display: inline-block;
   margin-bottom: 14px;
@@ -2877,6 +2975,11 @@ button.icon-button.active i.fa-retweet {
     max-width: 80vw;
     max-height: 80vh;
   }
+
+  img {
+    display: block;
+    background: url('../images/void.png') repeat;
+  }
 }
 
 .media-modal__close {
@@ -2991,6 +3094,14 @@ button.icon-button.active i.fa-retweet {
   &.active {
     cursor: default;
     background: darken($ui-secondary-color, 24%);
+  }
+}
+
+.onboarding-modal__page__wrapper {
+  pointer-events: none;
+
+  &.onboading-modal__page__wrapper--active {
+    pointer-events: auto;
   }
 }
 
