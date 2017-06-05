@@ -1601,7 +1601,7 @@
   height: 24px;
   padding: 0;
   border-radius: 30px;
-  background-color: darken($color_link, 10%);
+  background-color: darken($color_link, 50%);
   transition: all 0.2s ease;
 }
 
@@ -2070,21 +2070,21 @@ button.icon-button.active i.fa-retweet {
 
 .column-header__button {
   background: $color_theme;
+  color: $color_glay;
   border: 0;
   cursor: pointer;
   font-size: 16px;
   padding: 0 15px;
 
   &:hover {
-    color: darken($color_theme, 3%);
+    color: $color_text;
   }
 
   &.active {
-    color: $primary-text-color;
-    background: darken($color_theme, 3%);
+    color: $color_text;
+    background: $color_background;
 
     &:hover {
-      color: $primary-text-color;
       background: $color_theme;
     }
   }
