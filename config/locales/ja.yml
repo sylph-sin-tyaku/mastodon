@@ -8,7 +8,7 @@ ja:
     closed_registrations: 現在このインスタンスでの新規登録は受け付けていません。
     contact: 連絡先
     description_headline: "その他"
-    domain_count_after: 個のインスタンス
+    domain_count_after: インスタンス
     domain_count_before: 接続中
     features:
       api: あんまり覗かないでください
@@ -25,7 +25,7 @@ ja:
     other_instances: 他のインスタンス
     source_code: ソースコード
     status_count_after: トゥート
-    status_count_before: 投稿数
+    status_count_before: 投稿
     terms: プライバシーポリシー
     user_count_after: 人
     user_count_before: 家族
