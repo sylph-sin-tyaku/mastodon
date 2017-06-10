@@ -204,7 +204,7 @@ code {
     &:focus {
       position: relative;
       top: 1px;
-      background-color: darken($color_link, 5%);
+      background-color: darken($color_link, 10%);
     }
 
     &.negative {

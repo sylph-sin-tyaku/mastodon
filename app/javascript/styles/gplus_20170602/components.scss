@@ -31,9 +31,12 @@
   width: auto;
 
   &:active,
-  &:focus,
+  &:focus {
+    background-color: darken($color_link, 10%);
+  }
+
   &:hover {
-    background-color: lighten($color_link, 7%);
+    background-color: $color_link;
     transition: all 200ms ease-out;
   }
 
