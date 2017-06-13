@@ -1903,17 +1903,17 @@ button.icon-button.active i.fa-retweet {
   font-size: 14px;
   border: 1px solid lighten($ui-base-color, 8%);
   border-radius: 4px;
-  color: $color_link;
+  color: $color_button_text;
   margin-top: 14px;
   text-decoration: none;
   overflow: hidden;
-  background: $color_background;
+  background: $color_button;
   transition: all 100ms ease-in;
 
   &:active,
   &:focus,
   &:hover {
-    background: darken($color_background, 8%);
+    background: $color_link;
     transition: all 200ms ease-out;
   }
 }
@@ -1966,7 +1966,7 @@ button.icon-button.active i.fa-retweet {
   display: block;
   font-weight: 500;
   margin-bottom: 5px;
-  color: $ui-primary-color;
+  color: $color_button_text;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1979,7 +1979,7 @@ button.icon-button.active i.fa-retweet {
 }
 
 .status-card__description {
-  color: $ui-primary-color;
+  color: $color_background;
 }
 
 .status-card__host {
@@ -2887,7 +2887,7 @@ button.icon-button.active i.fa-retweet {
     font-size: 18px;
     width: 18px;
     height: 18px;
-    color: $ui-secondary-color;
+    color: $color_glay;
     cursor: default;
     pointer-events: none;
 
