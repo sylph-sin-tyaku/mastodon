@@ -63,7 +63,6 @@
 
 .column-collapsable {
   position: relative;
-  flex: 0 0 auto;
   top: -8px;
 
   .column-collapsable__content {
@@ -110,22 +109,6 @@
 
   &:hover {
     color: lighten($ui-primary-color, 7%);
-  }
-}
-
-.column-icon-clear {
-  font-size: 16px;
-  padding: 15px;
-  position: absolute;
-  right: 48px;
-  top: 0;
-  cursor: pointer;
-  z-index: 2;
-}
-
-@media screen and (min-width: 1025px) {
-  .column-icon-clear {
-    top: 10px;
   }
 }
 
@@ -1551,7 +1534,7 @@
   cursor: pointer;
   flex: 0 0 auto;
   font-size: 16px;
-  padding: 0 15px;
+  padding: 0 5px 0 0;
   z-index: 3;
 
   &:hover {
@@ -2038,6 +2021,28 @@ button.icon-button.active i.fa-retweet {
   }
 }
 
+.column-header__wrapper {
+  position: relative;
+  flex: 0 0 auto;
+
+  &.active {
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 35px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 60%;
+      pointer-events: none;
+      height: 28px;
+      z-index: 1;
+      background: radial-gradient(ellipse, rgba($ui-highlight-color, 0.23) 0%, rgba($ui-highlight-color, 0) 60%);
+    }
+  }
+}
+
 .column-header {
   padding: 15px;
   font-size: 16px;
@@ -2053,11 +2058,11 @@ button.icon-button.active i.fa-retweet {
   &.active {
     color: darken($color_link, 50%);
     box-shadow: 0 4px 5px rgba($color_text, 0.5);
-  }
 
-  &.active .column-header__icon {
-    color: darken($color_link, 50%);
-    text-shadow: 0 0 5px rgba($color_text, 0.5);
+    .column-header__icon {
+      color: darken($color_link, 50%);
+      text-shadow: 0 0 5px rgba($color_text, 0.5);
+    }
   }
 
   &.hidden-on-mobile {
@@ -2254,6 +2259,12 @@ button.icon-button.active i.fa-retweet {
   margin-bottom: 10px;
 }
 
+.column-settings__row {
+  .text-btn {
+    margin-bottom: 15px;
+  }
+}
+
 .modal-container__nav {
   align-items: center;
   background: rgba($base-overlay-background, 0.5);
@@ -2397,20 +2408,6 @@ button.icon-button.active i.fa-retweet {
       text-decoration: underline;
     }
   }
-}
-
-.status-list__unread-indicator,
-.notifications__unread-indicator {
-  position: absolute;
-  top: 35px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 60%;
-  pointer-events: none;
-  height: 28px;
-  z-index: 1;
-  background: radial-gradient(ellipse, rgba($color_link, 0.23) 0%, rgba($color_link, 0) 60%);
 }
 
 @keyframes pulse {
@@ -3115,7 +3112,7 @@ button.icon-button.active i.fa-retweet {
 .onboarding-modal__page__wrapper {
   pointer-events: none;
 
-  &.onboading-modal__page__wrapper--active {
+  &.onboarding-modal__page__wrapper--active {
     pointer-events: auto;
   }
 }
