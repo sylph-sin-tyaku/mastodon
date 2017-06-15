@@ -17,7 +17,7 @@ module Mastodon
     end
 
     def pre
-      nil
+      2
     end
 
     def to_a
