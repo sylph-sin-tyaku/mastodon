@@ -1,11 +1,3 @@
-// $color1: #282c37 !default; // darkest
-// $color2: #d9e1e8 !default; // lightest
-// $color3: #9baec8 !default; // lighter
-// $color4: #2b90d9 !default; // vibrant
-// $color5: #333333 !default; // white
-// $color6: #df405a !default; // error red
-// $color7: #79bd9a !default; // succ green
-// $color8: #000000 !default; // black
 
 // Commonly used web colors
 $black: #000000;            // Black
@@ -37,11 +29,14 @@ $ui-secondary-color: $classic-secondary-color !default;   // Lightest
 $ui-highlight-color: $classic-highlight-color !default;   // Vibrant
 
 // G+ UI
-$color_background: #EEEEEE !default; // 000
-$color_theme:      #DB4437 !default; // 001
-$color_text:       #333333 !default; // 002
-$color_panel:      #FFFFFF !default; // 003
-$color_link:       #4285F4 !default; // 004
-$color_black:      #000000 !default; // 005
-$color_white:      #FFFFFF !default; // 006
+$color_background:  #EEEEEE !default;
+$color_theme:       #DB4437 !default;
+$color_text:        #333333 !default;
+$color_panel:       #FFFFFF !default;
+$color_link:        #4285F4 !default;
+$color_button:      #DB4437 !default;
+$color_button_text: #FFFFFF !default;
+$color_black:       #000000 !default;
+$color_glay:        #6F6F6F !default;
+$color_white:       #FFFFFF !default;
 

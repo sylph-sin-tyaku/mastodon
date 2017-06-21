@@ -174,8 +174,8 @@ code {
     width: 100%;
     border: 0;
     border-radius: 4px;
-    background: $color_theme;
-    color: $color_white;
+    background: $color_button;
+    color: $color_button_text;
     font-size: 18px;
     line-height: inherit;
     height: auto;
@@ -204,7 +204,7 @@ code {
     &:focus {
       position: relative;
       top: 1px;
-      background-color: darken($color_link, 5%);
+      background-color: darken($color_link, 10%);
     }
 
     &.negative {
@@ -308,13 +308,15 @@ code {
       font-weight: 500;
     }
   }
+}
 
+.simple_form,
+.table-form {
   .warning {
     max-width: 400px;
     box-sizing: border-box;
     background: rgba($error-value-color, 0.5);
     color: $color_text;
-    text-shadow: 1px 1px 0 rgba($base-shadow-color, 0.3);
     box-shadow: 0 2px 6px rgba($base-shadow-color, 0.4);
     border-radius: 4px;
     padding: 10px;
@@ -364,7 +366,7 @@ code {
   & > label {
     font-family: inherit;
     font-size: 16px;
-    color: $primary-text-color;
+    color: $color_text;
     display: block;
     padding-top: 5px;
   }
