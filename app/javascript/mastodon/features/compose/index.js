@@ -11,6 +11,8 @@ import Motion from 'react-motion/lib/Motion';
 import spring from 'react-motion/lib/spring';
 import SearchResultsContainer from './containers/search_results_container';
 
+import AnnouncementsContainer from './containers/announcements_container';
+
 const messages = defineMessages({
   start: { id: 'getting_started.heading', defaultMessage: 'Getting started' },
   public: { id: 'navigation_bar.public_timeline', defaultMessage: 'Federated timeline' },
@@ -21,6 +23,7 @@ const messages = defineMessages({
 
 const mapStateToProps = state => ({
   showSearch: state.getIn(['search', 'submitted']) && !state.getIn(['search', 'hidden']),
+  submitting: state.getIn(['compose', 'is_submitting'])
 });
 
 class Compose extends React.PureComponent {
@@ -30,6 +33,9 @@ class Compose extends React.PureComponent {
     multiColumn: PropTypes.bool,
     showSearch: PropTypes.bool,
     intl: PropTypes.object.isRequired,
+
+    intent: PropTypes.bool,
+    submitting: PropTypes.bool,
   };
 
   componentDidMount () {
@@ -40,7 +46,27 @@ class Compose extends React.PureComponent {
     this.props.dispatch(unmountCompose());
   }
 
+  componentDidUpdate (prevProps) {
+    if (this.props.intent && prevProps.submitting && !this.props.submitting) {
+      window.close();
+      // Cannot close window unless it opened by JavaScript.
+      setTimeout(() => (location.href = '/'), 240);
+    }
+  }
+
+
   render () {
+    if (this.props.intent) {
+      return (
+        <div className='compose-form__intent'>
+          <div style={{ maxWidth: 400, width: '100%' }}>
+            <NavigationContainer />
+            <ComposeFormContainer />
+          </div>
+        </div>
+      );
+    }
+
     const { multiColumn, showSearch, intl } = this.props;
 
     let header = '';
@@ -67,6 +93,7 @@ class Compose extends React.PureComponent {
           <div className='drawer__inner'>
             <NavigationContainer />
             <ComposeFormContainer />
+            <AnnouncementsContainer />
           </div>
 
           <Motion defaultStyle={{ x: -100 }} style={{ x: spring(showSearch ? 0 : -100, { stiffness: 210, damping: 20 }) }}>
