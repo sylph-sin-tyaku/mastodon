@@ -17,7 +17,7 @@ module Mastodon
     end
 
     def pre
-      '+9ca02a0.1'
+      '1'
     end
 
     def to_a
