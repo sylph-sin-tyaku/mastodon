@@ -19,6 +19,8 @@ class IconButton extends React.PureComponent {
     animate: PropTypes.bool,
     overlay: PropTypes.bool,
 
+    width: PropTypes.number,
+    height: PropTypes.number,
     text: PropTypes.string,
   };
 
@@ -28,6 +30,10 @@ class IconButton extends React.PureComponent {
     disabled: false,
     animate: false,
     overlay: false,
+
+    width: 18,
+    height: 18,
+    text: ``,
   };
 
   handleClick = (e) =>  {
@@ -41,8 +47,8 @@ class IconButton extends React.PureComponent {
   render () {
     const style = {
       fontSize: `${this.props.size}px`,
-      width: `${this.props.size * 1.28571429}px`,
-      height: `${this.props.size * 1.28571429}px`,
+      width: `${this.props.width * 1.28571429}px`,
+      height: `${this.props.height * 1.28571429}px`,
       lineHeight: `${this.props.size}px`,
       ...this.props.style,
       ...(this.props.active ? this.props.activeStyle : {}),

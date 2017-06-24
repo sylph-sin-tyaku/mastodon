@@ -1101,7 +1101,8 @@
 }
 
 .star-icon.active {
-  color: $color_button;
+  color: $color_button_text;
+  background-color: $color_button;
 }
 
 .notification__display-name {
