@@ -84,7 +84,7 @@ class ActionBar extends React.PureComponent {
         <div className='detailed-status__button'><IconButton animate active={status.get('favourited')} title={intl.formatMessage(messages.favourite)} icon='' text='+1' size='11' onClick={this.handleFavouriteClick} /></div>
 
         <div className='detailed-status__action-bar-dropdown'>
-          <DropdownMenu size={18} icon='ellipsis-h' items={menu} direction='left' ariaLabel='More' />
+          <DropdownMenu size={18} icon='ellipsis-v' items={menu} direction='left' ariaLabel='More' />
         </div>
       </div>
     );

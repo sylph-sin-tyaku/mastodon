@@ -142,7 +142,7 @@ class StatusActionBar extends ImmutablePureComponent {
         <IconButton className='status__action-bar-button star-icon' animate active={status.get('favourited')} title={intl.formatMessage(messages.favourite)} icon='' text='+1' size='11' onClick={this.handleFavouriteClick} />
 
         <div className='status__action-bar-dropdown'>
-          <DropdownMenu items={menu} icon='ellipsis-h' size={18} direction='right' ariaLabel='More' />
+          <DropdownMenu items={menu} icon='ellipsis-v' size={18} direction='right' ariaLabel='More' />
         </div>
       </div>
     );
