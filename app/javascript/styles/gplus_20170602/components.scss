@@ -161,7 +161,8 @@
     }
 
     &.active {
-      color: $color_link;
+      color: $color_button_text;
+      background-color: $color_button;
     }
 
     &.disabled {
