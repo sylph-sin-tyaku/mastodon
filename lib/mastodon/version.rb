@@ -17,7 +17,7 @@ module Mastodon
     end
 
     def pre
-      nil
+      '.16d0aed4.4'
     end
 
     def to_a
