@@ -2865,7 +2865,7 @@ button.icon-button.active i.fa-retweet {
     font-size: 18px;
     width: 18px;
     height: 18px;
-    color: $color_glay;
+    color: lighten($color_glay, 20%);
     cursor: default;
     pointer-events: none;
 
