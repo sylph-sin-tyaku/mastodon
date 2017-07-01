@@ -199,7 +199,7 @@ export default class Status extends ImmutablePureComponent {
       } else if (status.getIn(['media_attachments', 0, 'type']) === 'video') {
         media = <VideoPlayer media={status.getIn(['media_attachments', 0])} sensitive={status.get('sensitive')} onOpenVideo={this.props.onOpenVideo} />;
       } else {
-        media = <MediaGallery media={status.get('media_attachments')} sensitive={status.get('sensitive')} height={110} onOpenMedia={this.props.onOpenMedia} autoPlayGif={this.props.autoPlayGif} />;
+        media = <MediaGallery media={status.get('media_attachments')} sensitive={status.get('sensitive')} height={256} onOpenMedia={this.props.onOpenMedia} autoPlayGif={this.props.autoPlayGif} />;
       }
     }
 
