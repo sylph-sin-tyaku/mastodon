@@ -17,11 +17,11 @@ module Mastodon
     end
 
     def pre
-      '+16d0aed4'
+      'a978b889'
     end
 
     def commit
-      4
+      0
     end
 
     def to_a
