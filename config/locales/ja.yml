@@ -6,23 +6,23 @@ ja:
     business_email: ''
     closed_registrations: 現在このインスタンスでの新規登録は受け付けていません。
     contact: 連絡先
-    description_headline: "その他"
+    description_headline: ニュース
     domain_count_after: インスタンス
     domain_count_before: 接続中
     features:
-      humane_approach_body: Learning from failures of other networks, Mastodon aims to make ethical design choices to combat the misuse of social media.
-      humane_approach_title: A more humane approach
-      not_a_product_body: Mastodon is not a commercial network. No advertising, no data mining, no walled gardens. There is no central authority.
-      not_a_product_title: You’re a person, not a product
-      real_conversation_body: With 500 characters at your disposal and support for granular content and media warnings, you can express yourself the way you want to.
-      real_conversation_title: Built for real conversation
-      within_reach_body: Multiple apps for iOS, Android, and other platforms thanks to a developer-friendly API ecosystem allow you to keep up with your friends anywhere.
-      within_reach_title: Always within reach
-    find_another_instance: Find another instance
+      real_conversation_title: お一人さまインスタンス
+      real_conversation_body: 投稿そのもののコントロールにおいて白いSNSさいつよだと思いますが、年々UIやUXが劣化しているので避難所としてのマストドンが使えます。
+      not_a_product_title: お人形しかいません
+      not_a_product_body: うちの子かわいい。よその子かわいい。お人形は、かわいいのです。
+      within_reach_title: いつでもどこでも
+      within_reach_body: お人形は見ていてくれます。お人形は、あなたを裏切りません。
+      humane_approach_title: なに言ってるのかわかりません
+      humane_approach_body: お人形たちは、好き勝手に趣味の断片を流しています。知っていることもあるけれど、知らないことはわかりません。
+    find_another_instance: 他のインスタンスを探す…
     generic_description: "%{domain} is one server in the network"
     get_started: 月乃家トップ
     hosted_on: Mastodon hosted on %{domain}
-    learn_more: Learn more
+    learn_more: Mastodon とは…
     links: リンク
     other_instances: 他のインスタンス
     other_instances_link: 'http://mastodon-instance.com/'
@@ -34,7 +34,7 @@ ja:
     user_count_after: 人
     user_count_before: 家族
     version: バージョン
-    what_is_mastodon: What is Mastodon?
+    what_is_mastodon: 月乃家とは。
   accounts:
     follow: フォロー
     followers: フォロワー
