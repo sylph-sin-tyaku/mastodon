@@ -1,24 +1,40 @@
 ---
 ja:
   about:
-    about_mastodon: Mastodon は<em>自由でオープンソース</em>なソーシャルネットワークです。商用プラットフォームの代替となる<em>分散型</em>を採用し、あなたのやりとりが一つの会社によって独占されるのを防ぎます。信頼できるインスタンスを選択してください &mdash; どのインスタンスを選んでも、誰とでもやりとりすることができます。 だれでも自分の Mastodon インスタンスを作ることができ、シームレスに<em>ソーシャルネットワーク</em>に参加できます。
-    about_this: このインスタンスについて
-    business_email: 'ビジネスメールアドレス:'
+    about_mastodon_html: 月乃家は<em>お人形たちが</em>どったんばったんおおさわぎ、するだけのSNSです。なので家族以外の人は入ることができません。ですが他のインスタンスから<em>遊びに来る</em>ことはできます。趣味のインスタンスなどに登録してみてください。できれば、みなさんも自分だけのインスタンスを<em>建ててみて</em>ください。
+    about_this: 家族構成
+    business_email: ''
     closed_registrations: 現在このインスタンスでの新規登録は受け付けていません。
     contact: 連絡先
-    description_headline: "%{domain} とは？"
-    domain_count_after: 個のインスタンス
+    description_headline: "その他"
+    domain_count_after: インスタンス
     domain_count_before: 接続中
-    get_started: 参加する
+    features:
+      humane_approach_body: Learning from failures of other networks, Mastodon aims to make ethical design choices to combat the misuse of social media.
+      humane_approach_title: A more humane approach
+      not_a_product_body: Mastodon is not a commercial network. No advertising, no data mining, no walled gardens. There is no central authority.
+      not_a_product_title: You’re a person, not a product
+      real_conversation_body: With 500 characters at your disposal and support for granular content and media warnings, you can express yourself the way you want to.
+      real_conversation_title: Built for real conversation
+      within_reach_body: Multiple apps for iOS, Android, and other platforms thanks to a developer-friendly API ecosystem allow you to keep up with your friends anywhere.
+      within_reach_title: Always within reach
+    find_another_instance: Find another instance
+    generic_description: "%{domain} is one server in the network"
+    get_started: 月乃家トップ
+    hosted_on: Mastodon hosted on %{domain}
+    learn_more: Learn more
     links: リンク
     other_instances: 他のインスタンス
+    other_instances_link: 'http://mastodon-instance.com/'
     source_code: ソースコード
+    source_code_link: 'https://github.com/sylph-sin-tyaku/mastodon'
     status_count_after: トゥート
-    status_count_before: トゥート数
+    status_count_before: 投稿
     terms: プライバシーポリシー
     user_count_after: 人
-    user_count_before: ユーザー数
+    user_count_before: 家族
     version: バージョン
+    what_is_mastodon: What is Mastodon?
   accounts:
     follow: フォロー
     followers: フォロワー
@@ -140,7 +156,7 @@ ja:
       nsfw:
         'false': NSFW オフ
         'true': NSFW オン
-      report: レポート#%{id}
+      report: 'レポート#%{id}'
       report_contents: 内容
       reported_account: 報告対象アカウント
       reported_by: 報告者
@@ -204,9 +220,9 @@ ja:
     delete_account_html: アカウントを削除したい場合、<a href="%{path}">こちら</a>から手続きが行えます。削除前には確認画面があります。
     didnt_get_confirmation: 確認メールを受信できませんか？
     forgot_password: パスワードをお忘れですか？
-    login: ログイン
-    logout: ログアウト
-    register: 登録する
+    login: 帰宅する
+    logout: 就寝する
+    register: 入居する
     resend_confirmation: 確認メールを再送する
     reset_password: パスワードを再発行
     set_new_password: 新しいパスワード
@@ -285,7 +301,7 @@ ja:
       following: フォロー中のアカウントリスト
       muting: ミュートしたアカウントリスト
     upload: アップロード
-  landing_strip_html: "<strong>%{name}</strong> さんはインスタンス %{link_to_root_path} のユーザーです。アカウントさえ持っていればフォローしたり会話したりできます。"
+  landing_strip_html: <strong>%{name}</strong> さんはインスタンス %{link_to_root_path} のユーザーです。<br />マストドンアカウントさえ持っていれば、フォローしたり会話したりできます。<br />もしお持ちでないなら <a href="http://mastodon-instance.com/">こちら</a> 等で、お好みのインスタンスを探して登録してみてください。
   landing_strip_signup_html: もしお持ちでないなら <a href="%{sign_up_path}">こちら</a> からサインアップできます。
   media_attachments:
     validations:
@@ -302,8 +318,8 @@ ja:
         one: "新しい1件の通知 \U0001F418"
         other: "新しい%{count}件の通知 \U0001F418"
     favourite:
-      body: 'あなたのトゥートが %{name} さんにお気に入り登録されました:'
-      subject: "%{name} さんがあなたのトゥートをお気に入りに登録しました"
+      body: '%{name} さんに+1されました:'
+      subject: "%{name} さんが+1しました"
     follow:
       body: "%{name} さんにフォローされています"
       subject: "%{name} さんにフォローされています"
@@ -314,11 +330,11 @@ ja:
       body: "%{name} さんから返信がありました:"
       subject: "%{name} さんに返信されました"
     reblog:
-      body: 'あなたのトゥートが %{name} さんにブーストされました:'
-      subject: あなたのトゥートが %{name} さんにブーストされました
+      body: '%{name} さんがブーストしました:'
+      subject: "%{name} さんがブーストしました"
   pagination:
-    next: 次
-    prev: 前
+    next: 次へ
+    prev: 前へ
     truncate: "&hellip;"
   push_notifications:
     favourite:
@@ -401,7 +417,7 @@ ja:
       unlisted_long: 誰でも見ることができますが、公開タイムラインには表示されません
   stream_entries:
     click_to_show: クリックして表示
-    reblogged: さんにブーストされました
+    reblogged: さんがブーストしました
     sensitive_content: 閲覧注意
   terms:
     body_html: |

@@ -34,7 +34,7 @@
             - else
               = link_to t('auth.login'), new_user_session_path, class: 'webapp-btn'
           %li= link_to t('about.about_this'), about_more_path
-          %li= link_to t('about.other_instances'), 'https://joinmastodon.org/'
+          %li= link_to t('about.other_instances'), t('about.other_instances_link')
 
       .container.hero
         .floats
@@ -74,5 +74,5 @@
   .footer-links
     .container
       %p
-        = link_to t('about.source_code'), 'https://github.com/tootsuite/mastodon'
+        = link_to t('about.source_code'), t('about.source_code_link')
         = " (#{@instance_presenter.version_number})"
