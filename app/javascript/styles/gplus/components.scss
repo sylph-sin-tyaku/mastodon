@@ -2121,7 +2121,7 @@ button.icon-button.active i.fa-retweet {
 }
 
 .column-header__collapsible-inner {
-  background: lighten($ui-base-color, 8%);
+  background: $color_background;
   padding: 15px;
 }
 
