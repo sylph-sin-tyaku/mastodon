@@ -21,7 +21,7 @@ module Mastodon
     end
 
     def commit
-      '46573cf2'
+      '0a9b7f74'
     end
 
     def to_a
