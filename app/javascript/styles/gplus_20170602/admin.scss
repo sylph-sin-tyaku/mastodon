@@ -6,7 +6,7 @@
   .sidebar-wrapper {
     flex: 1;
     height: 100%;
-    background: $color_background;
+    background: $color_panel;
     display: flex;
     justify-content: flex-end;
   }
@@ -88,6 +88,7 @@
     padding: 20px 15px;
     padding-top: 60px;
     padding-left: 25px;
+    background-color: $color_panel;
 
     h2 {
       color: $color_text;
