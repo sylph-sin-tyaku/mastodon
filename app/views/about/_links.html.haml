@@ -3,7 +3,8 @@
   .panel-list
     %ul
       - if user_signed_in?
-        %li= link_to t('about.get_started'), root_path
+        %li= link_to t('auth.login'), root_path
+        %li= link_to t('about.get_started'), '/about'
       - else
         %li= link_to t('about.get_started'), root_path
         - if instance.open_registrations

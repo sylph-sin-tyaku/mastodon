@@ -1,21 +1,21 @@
 ---
 ja:
   about:
-    about_mastodon_html: 月乃家は<em>お人形たちが</em>どったんばったんおおさわぎ、するだけのSNSです。なので家族以外の人は入ることができません。ですが他のインスタンスから<em>遊びに来る</em>ことはできます。趣味のインスタンスなどに登録してみてください。できれば、みなさんも自分だけのインスタンスを<em>建ててみて</em>ください。
+    about_mastodon_html: 月乃家は<em>お人形たちが</em>どったんばったんおおさわぎ、するだけのSNSです。なので家族以外の人は入ることができません。ですが他のインスタンスから<em>遊びに来る</em>ことはできます。趣味のインスタンスなどを探して登録してみてください。できれば、みなさんも自分だけのインスタンスを<em>建ててみて</em>ください。
     about_this: 家族構成
     business_email: ''
     closed_registrations: 現在このインスタンスでの新規登録は受け付けていません。
     contact: 連絡先
-    description_headline: ニュース
+    description_headline: お知らせ
     domain_count_after: インスタンス
     domain_count_before: 接続中
     features:
-      real_conversation_title: お一人さまインスタンス
-      real_conversation_body: 投稿そのもののコントロールにおいて白いSNSさいつよだと思いますが、年々UIやUXが劣化しているので避難所としてのマストドンが使えます。
+      real_conversation_title: お一人さまのインスタンス
+      real_conversation_body: 投稿そのもののコントロールは白いSNSさいつよだと思いますが、年々UIやUXが劣化しているので避難所としてマストドンを使っています。
       not_a_product_title: お人形しかいません
       not_a_product_body: うちの子かわいい。よその子かわいい。お人形は、かわいいのです。
       within_reach_title: いつでもどこでも
-      within_reach_body: お人形は見ていてくれます。お人形は、あなたを裏切りません。
+      within_reach_body: お人形は見ていてくれます。お人形は、あなたを裏切りません。お人形と共に永遠の眠りにつきたいです。
       humane_approach_title: なに言ってるのかわかりません
       humane_approach_body: お人形たちは、好き勝手に趣味の断片を流しています。知っていることもあるけれど、知らないことはわかりません。
     find_another_instance: 他のインスタンスを探す…
@@ -34,7 +34,7 @@ ja:
     user_count_after: 人
     user_count_before: 家族
     version: バージョン
-    what_is_mastodon: 月乃家とは。
+    what_is_mastodon: 月乃家とは
   accounts:
     follow: フォロー
     followers: フォロワー
