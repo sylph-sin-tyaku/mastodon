@@ -2885,13 +2885,13 @@ button.icon-button.active i.fa-retweet {
 .search__icon {
   .fa {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 8px;
+    right: 14px;
     z-index: 2;
     display: inline-block;
     opacity: 0;
     transition: all 100ms linear;
-    font-size: 18px;
+    font-size: 28px;
     width: 18px;
     height: 18px;
     color: lighten($color_glay, 20%);
