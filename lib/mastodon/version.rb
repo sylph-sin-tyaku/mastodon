@@ -17,11 +17,15 @@ module Mastodon
     end
 
     def pre
-      nil
+      '3fbf1bf3'
+    end
+
+    def commit
+      '28fd6216'
     end
 
     def to_a
-      [major, minor, patch, pre].compact
+      [major, minor, patch, pre, commit].compact
     end
 
     def to_s

@@ -34,7 +34,7 @@
             - else
               = link_to t('auth.login'), new_user_session_path, class: 'webapp-btn'
           %li= link_to t('about.about_this'), about_more_path
-          %li= link_to t('about.other_instances'), 'https://joinmastodon.org/'
+          %li= link_to t('about.other_instances'), t('about.other_instances_link')
 
       .container.hero
         .floats
@@ -54,7 +54,7 @@
                 %p= t('about.closed_registrations')
               - else
                 = @instance_presenter.closed_registrations_message.html_safe
-            = link_to t('about.find_another_instance'), 'https://joinmastodon.org/', class: 'button button-alternative button--block'
+            = link_to t('about.find_another_instance'), t('about.other_instances_link'), class: 'button button-alternative button--block'
 
   .learn-more-cta
     .container
@@ -69,10 +69,10 @@
       .about-mastodon
         %h3= t 'about.what_is_mastodon'
         %p= t 'about.about_mastodon_html'
-        %a.button.button-secondary{ href: 'https://joinmastodon.org/' }= t 'about.learn_more'
         = render 'features'
+        %a.button.button-secondary{ href: 'https://joinmastodon.org' }= t 'about.learn_more'
   .footer-links
     .container
       %p
-        = link_to t('about.source_code'), 'https://github.com/tootsuite/mastodon'
+        = link_to t('about.source_code'), t('about.source_code_link')
         = " (#{@instance_presenter.version_number})"
