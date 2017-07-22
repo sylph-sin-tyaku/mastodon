@@ -27,6 +27,24 @@ code {
 
   p.hint {
     margin-bottom: 15px;
+    color: lighten($ui-base-color, 32%);
+
+    &.subtle-hint {
+      text-align: center;
+      font-size: 12px;
+      line-height: 18px;
+      margin-top: 15px;
+      margin-bottom: 0;
+      color: lighten($ui-base-color, 26%);
+
+      a {
+        color: $ui-primary-color;
+      }
+    }
+  }
+
+  .card {
+    margin-bottom: 15px;
   }
 
   strong {
