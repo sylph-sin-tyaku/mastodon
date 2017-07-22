@@ -67,7 +67,7 @@ code {
   .input.file,
   .input.select,
   .input.radio_buttons,
-  .input.check_boxes {
+  .input.with_label {
     padding: 15px 0;
     margin-bottom: 0;
 
@@ -77,6 +77,44 @@ code {
       color: $color_text;
       display: block;
       padding-top: 5px;
+    }
+
+    &.boolean {
+      padding: initial;
+      margin-bottom: initial;
+
+      .label_input > label {
+        font-family: inherit;
+        font-size: 14px;
+        color: $primary-text-color;
+        display: block;
+        width: auto;
+      }
+
+      label.checkbox {
+        position: relative;
+        padding-left: 25px;
+        flex: 1 1 auto;
+      }
+    }
+  }
+
+  .input.with_block_label {
+    & > label {
+      font-family: inherit;
+      font-size: 16px;
+      color: $primary-text-color;
+      display: block;
+      padding-top: 5px;
+    }
+
+    .hint {
+      margin-bottom: 15px;
+    }
+
+    li {
+      float: left;
+      width: 50%;
     }
   }
 
@@ -120,6 +158,29 @@ code {
     .hint {
       padding-left: 25px;
       margin-left: 0;
+    }
+  }
+
+  .check_boxes {
+    .checkbox {
+      label {
+        font-family: inherit;
+        font-size: 14px;
+        color: $primary-text-color;
+        display: block;
+        width: auto;
+        position: relative;
+        padding-top: 5px;
+        padding-left: 25px;
+        flex: 1 1 auto;
+      }
+
+      input[type=checkbox] {
+        position: absolute;
+        left: 0;
+        top: 5px;
+        margin: 0;
+      }
     }
   }
 
@@ -242,6 +303,27 @@ code {
   select {
     font-size: 16px;
   }
+
+  .input-with-append {
+    position: relative;
+
+    .input input {
+      padding-right: 127px;
+    }
+
+    .append {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 7px 4px;
+      padding-bottom: 9px;
+      font-size: 16px;
+      color: lighten($ui-base-color, 26%);
+      font-family: inherit;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
 }
 
 .flash-message {
@@ -335,6 +417,7 @@ code {
     box-sizing: border-box;
     background: rgba($error-value-color, 0.5);
     color: $color_text;
+    /*text-shadow: 1px 1px 0 rgba($base-shadow-color, 0.3);*/
     box-shadow: 0 2px 6px rgba($base-shadow-color, 0.4);
     border-radius: 4px;
     padding: 10px;
@@ -379,22 +462,11 @@ code {
   }
 }
 
-.user_filtered_languages {
-
-  & > label {
-    font-family: inherit;
-    font-size: 16px;
+.post-follow-actions {
+  text-align: center;
     color: $color_text;
-    display: block;
-    padding-top: 5px;
-  }
 
-  .hint {
-    margin-bottom: 15px;
-  }
-
-  li {
-    float: left;
-    width: 50%;
+  div {
+    margin-bottom: 4px;
   }
 }
