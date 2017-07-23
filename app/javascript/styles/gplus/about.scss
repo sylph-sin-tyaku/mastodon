@@ -574,7 +574,8 @@
     flex: 0 0 auto;
     background: $color_background;
     overflow: hidden;
-    box-shadow: 0 0 6px rgba($black, 0.1);
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba($black, 0.5);
 
     .column {
       padding: 0;
@@ -607,14 +608,21 @@
       margin-bottom: 20px;
       background-color: rgba(255, 255, 255, 0.6);
       padding: 1em;
-      border-radius: 1em;
+      border-radius: 4px;
+      box-shadow: 0 0 4px rgba($black, 0.5);
     }
 
     .features-list {
       margin: 1em 0;
       background-color: rgba(255, 255, 255, 0.6);
       padding: 1em;
-      border-radius: 1em;
+      border-radius: 4px;
+      box-shadow: 0 0 4px rgba($black, 0.5);
+    }
+
+    h3 {
+      border-radius: 4px;
+      box-shadow: 0 0 4px rgba($black, 0.5);
     }
   }
 
