@@ -13,6 +13,8 @@ import spring from 'react-motion/lib/spring';
 import SearchResultsContainer from './containers/search_results_container';
 import { changeComposing } from '../../actions/compose';
 
+import AnnouncementsContainer from './containers/announcements_container';
+
 const messages = defineMessages({
   start: { id: 'getting_started.heading', defaultMessage: 'Getting started' },
   home_timeline: { id: 'tabs_bar.home', defaultMessage: 'Home' },
@@ -26,6 +28,7 @@ const messages = defineMessages({
 const mapStateToProps = state => ({
   columns: state.getIn(['settings', 'columns']),
   showSearch: state.getIn(['search', 'submitted']) && !state.getIn(['search', 'hidden']),
+  submitting: state.getIn(['compose', 'is_submitting'])
 });
 
 @connect(mapStateToProps)
@@ -38,6 +41,9 @@ export default class Compose extends React.PureComponent {
     multiColumn: PropTypes.bool,
     showSearch: PropTypes.bool,
     intl: PropTypes.object.isRequired,
+
+    intent: PropTypes.bool,
+    submitting: PropTypes.bool,
   };
 
   componentDidMount () {
@@ -46,6 +52,14 @@ export default class Compose extends React.PureComponent {
 
   componentWillUnmount () {
     this.props.dispatch(unmountCompose());
+  }
+
+  componentDidUpdate (prevProps) {
+    if (this.props.intent && prevProps.submitting && !this.props.submitting) {
+      window.close();
+      // Cannot close window unless it opened by JavaScript.
+      setTimeout(() => (location.href = '/'), 240);
+    }
   }
 
   onFocus = () => {
@@ -57,6 +71,17 @@ export default class Compose extends React.PureComponent {
   }
 
   render () {
+    if (this.props.intent) {
+      return (
+        <div className='compose-form__intent'>
+          <div style={{ maxWidth: 400, width: '100%' }}>
+            <NavigationContainer />
+            <ComposeFormContainer />
+          </div>
+        </div>
+      );
+    }
+
     const { multiColumn, showSearch, intl } = this.props;
 
     let header = '';
@@ -94,6 +119,7 @@ export default class Compose extends React.PureComponent {
           <div className='drawer__inner' onFocus={this.onFocus}>
             <NavigationContainer onClose={this.onBlur} />
             <ComposeFormContainer />
+            <AnnouncementsContainer />
           </div>
 
           <Motion defaultStyle={{ x: -100 }} style={{ x: spring(showSearch ? 0 : -100, { stiffness: 210, damping: 20 }) }}>
