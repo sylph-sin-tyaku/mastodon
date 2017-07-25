@@ -17,23 +17,27 @@ module Mastodon
     end
 
     def pre
-      '4b4ea1f'
-    end
-
-    def commit
-      '81fe455'
+      'nil'
     end
 
     def flags
       'rc1'
     end
 
+    def commit
+      '6957c5b5'
+    end
+
+    def sintyaku
+      '84283bc0'
+    end
+
     def to_a
-      [major, minor, patch, pre, commit].compact
+      [major, minor, patch, pre].compact
     end
 
     def to_s
-      [to_a.join('.'), flags].join
+      [to_a.join('.'), flags, commit, sintyaku].join('.')
     end
   end
 end
