@@ -17,7 +17,11 @@ module Mastodon
     end
 
     def pre
-      nil
+      '4b4ea1f'
+    end
+
+    def commit
+      '81fe455'
     end
 
     def flags
@@ -25,7 +29,7 @@ module Mastodon
     end
 
     def to_a
-      [major, minor, patch, pre].compact
+      [major, minor, patch, pre, commit].compact
     end
 
     def to_s
