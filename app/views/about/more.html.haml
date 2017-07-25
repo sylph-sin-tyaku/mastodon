@@ -25,11 +25,12 @@
         %ul.nav
           %li
             - if user_signed_in?
-              = link_to t('settings.back'), root_url, class: 'webapp-btn'
+              = link_to t('auth.login'), root_url, class: 'webapp-btn'
             - else
               = link_to t('auth.login'), new_user_session_path, class: 'webapp-btn'
+          %li= link_to t('about.what_is_mastodon'), about_path
           %li= link_to t('about.about_this'), about_more_path
-          %li= link_to t('about.other_instances'), 'https://joinmastodon.org/'
+          %li= link_to t('about.other_instances'), t('about.other_instances_link')
 
       .container.hero
         .heading
@@ -60,5 +61,5 @@
   .footer-links
     .container
       %p
-        = link_to t('about.source_code'), 'https://github.com/tootsuite/mastodon'
+        = link_to t('about.source_code'), t('about.source_code_link')
         = " (#{@instance_presenter.version_number})"
