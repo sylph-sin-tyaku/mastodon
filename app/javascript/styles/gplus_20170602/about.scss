@@ -615,7 +615,7 @@
       background-color: rgba(255, 255, 255, 0.6);
       padding: 1em;
       border-radius: 4px;
-      box-shadow: 0 0 4px rgba($black, 0.5);
+      box-shadow: 0 0 4px rgba($color_black, 0.5);
     }
 
     .features-list {
@@ -623,12 +623,13 @@
       background-color: rgba(255, 255, 255, 0.6);
       padding: 1em;
       border-radius: 4px;
-      box-shadow: 0 0 4px rgba($black, 0.5);
+      box-shadow: 0 0 4px rgba($color_black, 0.5);
     }
 
     h3 {
       border-radius: 4px;
-      box-shadow: 0 0 4px rgba($black, 0.5);
+      box-shadow: 0 0 4px rgba($color_black, 0.5);
+      background-color: rgba($color_theme, 0.5);
     }
   }
 
