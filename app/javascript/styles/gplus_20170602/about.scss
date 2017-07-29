@@ -128,7 +128,7 @@
 
 .information-board {
   background: $color_theme;
-  padding: 40px 0;
+  padding: 20px 0;
 
   .panel {
     position: absolute;
@@ -137,7 +137,7 @@
     background: $color_theme;
     padding: 20px;
     padding-top: 10px;
-    border-radius: 4px;
+    border-radius: 0 0 10px 10px;
     right: -12px;
     bottom: -50px;
     box-shadow: 0 0 4px rgba($color_black,0.5);
@@ -170,13 +170,14 @@
   .information-board-sections {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .section {
     flex: 1 0 0;
     font: 16px/28px 'mastodon-font-sans-serif', sans-serif;
     text-align: right;
-    padding: 0 15px;
+    padding: 10px 15px;
 
     span,
     strong {
@@ -196,14 +197,6 @@
       font-size: 32px;
       line-height: 48px;
       color: $color_text;
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    flex-direction: column;
-
-    .section {
-      text-align: left;
     }
   }
 }
@@ -311,8 +304,8 @@
       height: auto;
       left: 60px;
       z-index: 3;
-      border-radius: 10px;
-      box-shadow: 0 0 10px 2px rgba($color_black, 0.5);
+      border-radius: 10px 10px 0 0;
+      box-shadow: 0 0 10px 2px rgba($color_link, 0.5);
     }
   }
 
@@ -500,7 +493,7 @@
     padding: 50px 0;
 
     .container {
-      background-color: rgba(255, 255, 255, 0.50);
+      background-color: $color_panel;
       padding: 1em;
       border-radius: 10px;
       box-shadow: 0 0 4px rgba(0,0,0,0.5);
@@ -563,6 +556,7 @@
   }
 
   #mastodon-timeline {
+    display: flex;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     font-family: 'mastodon-font-sans-serif', sans-serif;
@@ -578,11 +572,21 @@
     border-radius: 4px;
     box-shadow: 0 0 4px rgba($black, 0.5);
 
+    .column-header {
+      color: $color_text;
+      font-family: inherit;
+      font-size: 16px;
+      line-height: inherit;
+      font-weight: inherit;
+      margin: 0;
+      padding: 15px;
+      border-bottom: 8px solid $color_background;
+    }
+
     .column {
       padding: 0;
-      border-radius: 4px;
+      border-radius: 8px 8px 0 0;
       overflow: hidden;
-      height: 100%;
     }
 
     .scrollable {
@@ -612,24 +616,23 @@
 
     p {
       margin-bottom: 20px;
-      background-color: rgba(255, 255, 255, 0.6);
+      background-color: $color_panel;
       padding: 1em;
-      border-radius: 4px;
       box-shadow: 0 0 4px rgba($color_black, 0.5);
     }
 
     .features-list {
       margin: 1em 0;
-      background-color: rgba(255, 255, 255, 0.6);
+      background-color: $color_panel;
       padding: 1em;
-      border-radius: 4px;
+      border-radius: 0 0 8px 8px;
       box-shadow: 0 0 4px rgba($color_black, 0.5);
     }
 
     h3 {
-      border-radius: 4px;
+      border-radius: 8px 8px 0 0;
       box-shadow: 0 0 4px rgba($color_black, 0.5);
-      background-color: rgba($color_theme, 0.5);
+      background-color: $color_panel;
     }
   }
 
@@ -676,13 +679,9 @@
     }
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 840px) {
     .container {
       padding: 0 20px;
-    }
-
-    .information-board {
-      padding-bottom: 20px;
     }
 
     .information-board .container {
@@ -690,7 +689,7 @@
 
       .panel {
         position: static;
-        margin-top: 30px;
+        margin-top: 20px;
         width: 100%;
         border-radius: 4px;
 
@@ -718,6 +717,10 @@
   @media screen and (max-width: 675px) {
     .header-wrapper {
       padding-top: 0;
+
+      &.compact .hero .heading {
+        padding-bottom: 20px;
+      }
     }
 
     .header .container,
@@ -730,14 +733,13 @@
     }
 
     .header {
-      padding-top: 0;
 
       .hero {
         margin-top: 30px;
         padding: 0;
 
         .heading {
-          padding-bottom: 20px;
+          padding: 0 20px 20px;
         }
       }
 
@@ -748,6 +750,16 @@
       .heading,
       .nav {
         text-align: center;
+      }
+
+      .nav {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+      }
+
+      .links a {
+        padding: 12px 8px;
       }
 
       .heading h1 {
