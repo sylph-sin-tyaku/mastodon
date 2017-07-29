@@ -569,7 +569,7 @@
     flex: 0 0 auto;
     background: $color_background;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 8px;
     box-shadow: 0 0 4px rgba($black, 0.5);
 
     .column-header {
@@ -585,7 +585,6 @@
 
     .column {
       padding: 0;
-      border-radius: 8px 8px 0 0;
       overflow: hidden;
     }
 
