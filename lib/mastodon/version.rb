@@ -24,12 +24,20 @@ module Mastodon
       'rc2'
     end
 
+    def commit
+      'c71874b8'
+    end
+
+    def sintyaku
+      ''
+    end
+
     def to_a
       [major, minor, patch, pre].compact
     end
 
     def to_s
-      [to_a.join('.'), flags].join
+      [to_a.join('.'), flags, commit, sintyaku].join('.')
     end
   end
 end
