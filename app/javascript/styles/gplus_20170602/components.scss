@@ -564,7 +564,6 @@
 
   opacity: 1;
   animation: fade 150ms linear;
-  outline: none;
 
   &.status-direct {
     background: lighten($color_button, 40%);
