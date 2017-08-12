@@ -25,11 +25,11 @@ module Mastodon
     end
 
     def commit
-      '.41c3389d'
+      '.41c3389'
     end
 
     def sintyaku
-      '.d15a0d6c'
+      '.328ac56'
     end
 
     def to_a
