@@ -1,0 +1,32 @@
+.landing-strip {
+  background: $color_panel;
+  color: $color_text;
+  font-weight: 400;
+  padding: 14px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 15px rgba($color_black,0.2);
+
+  strong,
+  a {
+    font-weight: 500;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .logo {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 auto;
+    margin-right: 15px;
+  }
+
+  @media screen and (max-width: 740px) {
+    margin-bottom: 0;
+  }
+}
