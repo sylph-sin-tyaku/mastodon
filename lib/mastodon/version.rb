@@ -29,7 +29,7 @@ module Mastodon
     end
 
     def sintyaku
-      '+5d8a63fe'
+      '+f86383aa'
     end
 
     def to_a
