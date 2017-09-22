@@ -24,16 +24,28 @@ module Mastodon
       ''
     end
 
+    def commit
+      '.4c14ff65'
+    end
+
+    def sintyaku
+      '+5d8a63fe'
+    end
+
     def to_a
       [major, minor, patch, pre].compact
     end
 
+    def to_b
+      [commit, sintyaku].compact
+    end
+
     def to_s
-      [to_a.join('.'), flags].join
+      [to_a.join('.'), flags, to_b].join
     end
 
     def source_base_url
-      'https://github.com/tootsuite/mastodon'
+      'https://github.com/sylph-sin-tyaku/mastodon'
     end
 
     # specify git tag or commit hash here
