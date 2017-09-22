@@ -352,7 +352,7 @@
   .information-board {
     background: $color_theme;
     padding: 20px 0;
-    box-shadow: 0 0 4px rgba($color_text, 0.5);
+    box-shadow: 0 0 4px rgba($color_black, 0.5);
 
     .container {
       position: relative;
@@ -402,7 +402,7 @@
       border-radius: 4px;
       right: 0;
       bottom: -40px;
-      box-shadow: 0 0 4px rgba($color_text, 0.5);
+      box-shadow: 0 0 4px rgba($color_black, 0.5);
 
       .panel-header {
         font-family: 'mastodon-font-display', sans-serif;
@@ -489,7 +489,7 @@
       margin-right: 30px;
       flex: 0 0 auto;
       overflow: hidden;
-      box-shadow: 0 0 6px rgba($black, 0.1);
+      box-shadow: 0 0 4px rgba($color_black, 0.5);
 
       .column-header {
         font-family: inherit;
@@ -531,6 +531,9 @@
 
     .about-mastodon {
       max-width: 675px;
+      background: rgba($color_theme, 0.5);
+      padding: 1em;
+      box-shadow: 0 0 4px rgba($color_black, 0.5);
 
       p {
         margin-bottom: 20px;
@@ -590,7 +593,7 @@
         background: $color_theme;
         color: $color_text;
         padding: 1em;
-        box-shadow: 0 0 4px rgba($color_text, 0.5);
+        box-shadow: 0 0 4px rgba($color_black, 0.5);
         border-radius: 4px;
     }
 
