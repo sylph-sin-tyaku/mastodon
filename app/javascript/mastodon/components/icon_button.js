@@ -22,6 +22,9 @@ export default class IconButton extends React.PureComponent {
     animate: PropTypes.bool,
     overlay: PropTypes.bool,
     tabIndex: PropTypes.string,
+
+    box: PropTypes.number,
+    text: PropTypes.string,
   };
 
   static defaultProps = {
@@ -31,6 +34,9 @@ export default class IconButton extends React.PureComponent {
     animate: false,
     overlay: false,
     tabIndex: '0',
+
+    box: 0,
+    text: ``,
   };
 
   handleClick = (e) =>  {
@@ -44,8 +50,8 @@ export default class IconButton extends React.PureComponent {
   render () {
     const style = {
       fontSize: `${this.props.size}px`,
-      width: `${this.props.size * 1.28571429}px`,
-      height: `${this.props.size * 1.28571429}px`,
+      width: (this.props.box > 0 ? `${this.props.box}px` : `${this.props.size * 1.28571429}px`),
+      height: (this.props.box > 0 ? `${this.props.box}px` : `${this.props.size * 1.28571429}px`),
       lineHeight: `${this.props.size}px`,
       ...this.props.style,
       ...(this.props.active ? this.props.activeStyle : {}),
@@ -63,6 +69,9 @@ export default class IconButton extends React.PureComponent {
       pressed,
       tabIndex,
       title,
+
+      box,
+      text,
     } = this.props;
 
     const classes = classNames(className, 'icon-button', {
@@ -104,7 +113,7 @@ export default class IconButton extends React.PureComponent {
             style={style}
             tabIndex={tabIndex}
           >
-            <i style={{ transform: `rotate(${rotate}deg)` }} className={`fa fa-fw fa-${icon}`} aria-hidden='true' />
+            <i style={{ transform: `rotate(${rotate}deg)` }} className={`fa fa-fw fa-${icon}`} aria-hidden='true'>{text}</i>
           </button>
         )}
       </Motion>
