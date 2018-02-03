@@ -25,7 +25,7 @@
               = link_to t('auth.login'), new_user_session_path, class: 'webapp-btn'
           %li= link_to t('about.about_this'), about_more_path
           %li
-            = link_to 'https://joinmastodon.org/' do
+            = link_to t('about.other_instances_link') do
               = "#{t('about.other_instances')}"
               %i.fa.fa-external-link{ style: 'padding-left: 5px;' }
 
@@ -47,7 +47,7 @@
                 %p= t('about.closed_registrations')
               - else
                 = @instance_presenter.closed_registrations_message.html_safe
-            = link_to t('about.find_another_instance'), 'https://joinmastodon.org/', class: 'button button-alternative button--block'
+            = link_to t('about.find_another_instance'), t('about.other_instances_link'), class: 'button button-alternative button--block'
 
   .about-short
     .container
@@ -67,5 +67,5 @@
   .footer-links
     .container
       %p
-        = link_to t('about.source_code'), @instance_presenter.source_url
+        = link_to t('about.source_code'), t('about.source_code_link')
         = " (#{@instance_presenter.version_number})"

@@ -28,7 +28,9 @@ en:
     hosted_on: Mastodon hosted on %{domain}
     learn_more: Learn more
     other_instances: Instance list
+    other_instances_link: 'https://joinmastodon.org/'
     source_code: Source code
+    source_code_link: 'https://github.com/sylph-sin-tyaku/mastodon'
     status_count_after: statuses
     status_count_before: Who authored
     user_count_after: users
